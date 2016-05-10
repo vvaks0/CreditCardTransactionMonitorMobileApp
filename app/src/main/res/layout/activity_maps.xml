@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical" >
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    tools:context="com.hortonworks.iot.financial.customerapp.MapsActivity"
+    tools:layout="@layout/abc_screen_simple" />
+
+    <LinearLayout
+        android:id="@+id/screenLayout"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_alignParentBottom="true">
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_weight="1"
+        android:text="Yes" />
+    <Button
+        android:id="@+id/deny"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_weight="1"
+        android:text="No" />
+    </LinearLayout>
+    <TextView android:id="@+id/banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp" android:gravity="center"
+        android:layout_gravity="center" android:layout_marginLeft="10dp"
+        android:text="Did you make a purchase at this location?" />
+    <TextView android:id="@+id/accountNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp" android:gravity="left"
+        android:layout_gravity="left" android:layout_marginLeft="10dp"/>
+    <TextView android:id="@+id/transactionId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp" android:gravity="left"
+        android:layout_gravity="left" android:layout_marginLeft="10dp" />
+    <TextView android:id="@+id/merchantType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp" android:gravity="left"
+        android:layout_gravity="left" android:layout_marginLeft="10dp" />
+    <!--<TextView android:id="@+id/merchantId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp" android:gravity="left"
+        android:layout_gravity="left" android:layout_marginLeft="10dp" /> -->
+    <TextView android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp" android:gravity="left"
+        android:layout_gravity="left" android:layout_marginLeft="10dp" />
+</LinearLayout>
