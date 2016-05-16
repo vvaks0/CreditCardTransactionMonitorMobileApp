@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.amazonaws.auth.AWSCredentials;
+import com.amazonaws.auth.AnonymousAWSCredentials;
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.services.sqs.AmazonSQSClient;
 import com.amazonaws.services.sqs.model.GetQueueUrlResult;
@@ -33,7 +34,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
     private static final String TAG = "MapActivity";
     private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
-    private AWSCredentials credentials = new BasicAWSCredentials( Constants.awsAccessKeyId, Constants.awsSecretKey );
+    //private AWSCredentials credentials = new BasicAWSCredentials( Constants.awsAccessKeyId, Constants.awsSecretKey );
+    private AWSCredentials credentials = new AnonymousAWSCredentials();
     private AmazonSQSClient sqsClient = new AmazonSQSClient( credentials );
     private GetQueueUrlResult queueURLResult;
     private String customerValidationQueueURL = Constants.customerValidationQueueURL;
