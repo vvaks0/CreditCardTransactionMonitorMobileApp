@@ -91,15 +91,16 @@ Under the java folder, browse to:
 app-->java-->com.hortonworks.iot.financial.customerapp-->Constants:
 
 public static String customerValidationQueueURL = "YOUR AMAZON SQS QUEUE URL";
+
 public static String authorizedEntity = "YOUR GOOGLE API PROJECT NUMBER";
 
 Under the res folder, browse to:
 
 app-->res-->values-->google_maps_api.xml (debug):
 
-<string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+string name="google_maps_key" templateMergeStrategy="preserve" translatable="false"
 ENTER YOUR GOOGLE BROWSER KEY CREDENTIAL HERE
-</string>
+/string
 
 From the File menu, select Save All
 
